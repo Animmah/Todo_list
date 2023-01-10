@@ -6,8 +6,9 @@ app.set('view engine', 'ejs');// create a views directory and save ejs files the
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.static("public"));
-//replace the password below to connect to mongoDB atlas
-mongoose.connect("mongodb://admin-<password>:<password>@ac-fq34iy8-shard-00-00.15iv1kl.mongodb.net:27017,ac-fq34iy8-shard-00-01.15iv1kl.mongodb.net:27017,ac-fq34iy8-shard-00-02.15iv1kl.mongodb.net:27017/?ssl=true&replicaSet=atlas-pauzj0-shard-0&authSource=admin&retryWrites=true&w=majority").then(()=>{
+//replace mongoose connect with lower versions string from mogodb atlas connect app
+
+mongoose.connect("").then(()=>{
     console.log("connected with mongoose")
 }).catch((e)=>{
     console.log(e);
